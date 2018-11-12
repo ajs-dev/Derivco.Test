@@ -1,4 +1,5 @@
 ﻿using System;
+using Derivco.Test.Service;
 
 namespace Derivco.Test
 {
@@ -6,7 +7,11 @@ namespace Derivco.Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var menu = MenuService.Build();
+
+            MenuService.Print(menu);
+
+            Console.ReadKey();
         }
     }
 }
